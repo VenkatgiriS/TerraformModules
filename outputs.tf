@@ -1,15 +1,15 @@
 output vpc_id {
-    value = "${module.capgemini.vpcid}"
+    value = "${module.opstree.vpcid}"
 }
 output sn1 {
-    value = "${module.capgemini.subnet1id}"
+    value = "${module.opstree.subnet1id}"
 }
 output sn2 {
-    value = "${module.capgemini.subnet2id}"
+    value = "${module.opstree.subnet2id}"
 }
 output sn3 {
-    value = "${module.capgemini.subnet3id}"
+    value = "${module.opstree.subnet3id}"
 }
 output sg {
-    value = "${module.capgemini.sgid}"
+    value = "${module.opstree.sgid}"
 }
