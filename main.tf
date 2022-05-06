@@ -4,26 +4,26 @@ provider "aws" {
   secret_key = "####"
 }
 
-module "capgemini" {
+module "opsmx" {
     source = "./modules/vpc"
-    vpc_name = "capgemini"
+    vpc_name = "opsmx"
     vpc_cidr = "18.0.0.0/16"
     environment = "Dev"
-    IGW_name = "capgemini_IG"
-    public_subnet1_name = "capgemini_SN1"
-    public_subnet2_name = "capgemini_SN2"
-    public_subnet3_name = "capgemini_SN3"
+    IGW_name = "opsmx_IG"
+    public_subnet1_name = "opsmx_SN1"
+    public_subnet2_name = "opsmx_SN2"
+    public_subnet3_name = "opsmx_SN3"
     public_subnet1_cidr = "18.0.1.0/24"
     public_subnet2_cidr = "18.0.2.0/24"
     public_subnet3_cidr = "18.0.3.0/24"
-    Main_Routing_Table = "capgemini_RT"
+    Main_Routing_Table = "opsmx_RT"
 }
 module "capec2" {
     source = "./modules/ec2"
     imagename = "ami-0022f774911c1d690"
-    sn = "${module.capgemini.subnet1id}"
-    sg = "${module.capgemini.sgid}"
-    instancename = "capServer1"
+    sn = "${module.opsmx.subnet1id}"
+    sg = "${module.opsmx.sgid}"
+    instancename = "OpsMxServer1"
  
 }
 
