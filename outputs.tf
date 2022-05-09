@@ -11,10 +11,5 @@ output sn3 {
     value = "${module.capgemini.subnet3id}"
 }
 output sg {
-<<<<<<< HEAD
     value = "${module.opstree.sgid}"
 }
-=======
-    value = "${module.capgemini.sgid}"
-}
->>>>>>> parent of 1446cc8 (jenkins installation)
