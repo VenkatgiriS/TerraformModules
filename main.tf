@@ -1,11 +1,7 @@
 provider "aws" {
   region     = "us-east-1"
   access_key = "####"
-<<<<<<< HEAD
   secret_key = "###"
-=======
-  secret_key = "####"
->>>>>>> parent of 1446cc8 (jenkins installation)
 }
 
 module "opsmx" {
